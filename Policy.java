@@ -155,7 +155,7 @@
         {
             price+=75; 
         }
-        if(smoke = "smoker") //add 100 if policyholder is a smoker
+        if(smoke.length() < 6) //add 100 if policyholder is a smoker
         {
             price+=100; 
         }

@@ -15,7 +15,7 @@ public class Project_Medha_Karthik
         Scanner keyboard = new Scanner(System.in); 
 
         System.out.print("Please enter the Policy Number: "); 
-        userPolicyNumber = keyboard.nextLine(); 
+        userPolicyNumber = keyboard.nextInt(); 
         System.out.print("Please enter the Provider Name: "); 
         userProviderName = keyboard.nextLine();
         System.out.print("Please enter the Policyholder's First Name: "); 
@@ -23,20 +23,20 @@ public class Project_Medha_Karthik
         System.out.print("Please enter the Policyholder's Last Name: "); 
         userLastName = keyboard.nextLine();
         System.out.print("Please enter the Policyholder's Age: "); 
-        userAge = keyboard.nextLine();
+        userAge = keyboard.nextInt();
         System.out.print("Please enter the Policyholder's Smoking Status (smoker/non-smoker): "); 
         userSmoking = keyboard.nextLine();
         System.out.print("Please enter the Policyholder's Height (in inches): "); 
-        userHeight = keyboard.nextLine();
+        userHeight = keyboard.nextDouble();
         System.out.print("Please enter the Policyholder's Weight (in pounds): "); 
-        userWeight = keyboard.nextLine();
+        userWeight = keyboard.nextDouble();
 
         //create a new instace of the policy class 
         Policy user = new Policy(userPolicyNumber, userProviderName, userFirstName, userLastName, userAge, userSmoking, userHeight, userWeight);
-        double userBMI = BMI(); 
-        double userPrice = price(userBMI); 
-        //print data provided
+        double userBMI = user.BMI(); 
+        double userPrice = user.price(userBMI); 
 
+        //print data provided
         System.out.println("Policy Number: " + user.getNumber()); 
         System.out.println("Provider Name: " + user.getName()); 
         System.out.println("Policyholder's First Name: " + user.getFirstName()); 
